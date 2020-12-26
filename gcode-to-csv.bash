@@ -26,7 +26,7 @@ cat $1 |
     sed -e '70,$s/^N0,000/,/g' |
     awk -F, '{print $2,$4,$6,$8,$10,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21}' |
     sed 's/ /,/g' |
-    sed '1iN0,G,X,Z,R,F'
+    sed '1iN0,G,X,Z,R,F' > $(basename $1 .txt).csv
 
 
 
